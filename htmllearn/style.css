@@ -1,0 +1,1515 @@
+.header-left {
+    justify-content: flex-start; 
+}
+
+.header-center {
+    justify-content: center;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+/* задаю стиль для всего хедера */
+.site-header {
+    border-bottom: 2px solid #E2E8F0;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+/* задаю общий стиль для всех 3 частей хедера */
+.header-part {
+    flex: 0 0 33.33%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* cтиль логотипа */
+.logo {
+    height: 150px;
+    width: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* надпись по центру */
+.site-name {
+    font-family: 'Calligraffitti', bold, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: #1C008C;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1.5 px;
+    transition: transform 0.3s ease;
+}
+
+.site-name:hover {
+    transform: scale(1.1);
+}
+
+/*Вход в личный кабинет */
+.account-link {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1E293B !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+
+.account-link:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+/* общий стиль для всего меню */
+
+.nav-menu {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: 0 1px 3px (0, 0, 0, 0.5);
+}
+
+/* список пунктов навигационного меню */
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.nav-item {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Общий стиль для каждого отдельного пункта меню */
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    padding: 15px, 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E293B;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #E2E8F0;
+    overflow: hidden;
+    border: 1px solid #000000;
+    border-right: none;
+}
+
+/* убираю левую границу у первого элемента,
+белый цвет на задний фон и первого и последнего элемента */
+
+.nav-item:first-child .nav-link {
+    border-left: none;
+    background-color: #FFFFFF;
+}
+.nav-item:last-child .nav-link {
+    background-color: #FFFFFF;
+}
+
+.nav-item:nth-child(2) .nav-link, 
+.nav-item:nth-child(3) .nav-link {
+    background-color: #E2E8F0
+}
+
+.nav-link:hover {
+    background-color: #0369A1 !important;
+    color: #F8FAFC !important;
+    transform: translateY(-1px);
+}
+
+.nav-link:active {
+    background-color: #F5E90B !important;
+    color: #1E293B;
+    font-weight: 600;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #F5E90B;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-link:hover:after {
+    width: 80%;
+}
+
+.cities-section {
+    padding: 40px 20px;
+    background-color: #FFFFFF;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cities-title {
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.cities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.city-card {
+    width: 30%;
+    min-width: 300;
+    background-color: #F8FAFC;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transform: all 0.3s ease;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px rgba (0, 0, 0, 0.05);
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    transform: scale(1);
+    transform-origin: center;
+
+}
+
+.city-card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.city-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 0 0 3px #0369A1;
+    margin: 0 auto 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.city-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.city-description {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #64748B;
+    margin: 0;
+    font-style: Italic;
+}
+
+.site-footer {
+    background-color: #0369A1;
+    color: #FFFFFF;
+    padding: 25px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #F59E0B;
+}
+
+.footer-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ключевое изменение: каждый элемент занимает ровно 1/3 и центрируется в ней */
+.footer-item {
+    flex: 1; /* Равные части */
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+    height: 100%;
+    padding: 0 15px;
+}
+
+.footer-year {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-company {
+    font-size: 18px;
+    font-weight: 700;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 20px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contacts-main {
+    background-color: #F8FAFC;
+    min-height: calc(100vh - 300px)
+}
+
+.contacts-container {
+    min-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0,08);
+}
+
+.contacts-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #0369A1;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contacts-title i {
+    font-size: 40px;
+    color: #F5E90B;
+}
+
+.contacts-subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #64748B;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.contacts-table-container {
+    overflow-x: auto;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+}
+
+.table-header {
+    background-color: #E2E8F0;
+    color: #1E293B;
+}
+
+.table-header th{
+    padding: 20px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #0369A1;
+    vertical-align: middle;
+}
+
+.table-header th i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #0369A1;
+}
+
+.column-position {
+    width: 35%;
+    border-right: 1px solid #CBD5E1;
+}
+
+.column-name {
+    width: 35%;
+    border-right: 1px solid #CBD5E1;
+}
+
+.column-contacts {
+    width: 30%;
+}
+
+.table-row {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    transition: background-color 0.3s ease;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row td {
+    padding: 18px 15px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.position-cell {
+    font-weight: 700;
+    color: #0369A1;
+    border-right: 1px solid #E2E8F0;
+}
+
+.name-cell {
+    color: #1E293B;
+    border-right: 1px solid #E2E8F0;
+}
+
+.contact-cell {
+    color: #475569;
+}
+
+.table-row:hover {
+    background-color: #F8FAFC;
+}
+
+.position-cell:hover {
+    background-color: #E0F2FE;
+    transition: background-color 0.3s ease;
+}
+
+.name-cell:hover {
+    background-color: #FEF3C7;
+    transition: background-color 0.3s ease;
+}
+
+.contact-cell:hover {
+    background-color: #D1FAE5;
+    transition: background-color 0.3s ease;
+}
+
+.table-row:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+.table-row:nth-child(even):hover {
+    background-color: #F1F5F9;
+}
+
+.contacts-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 30px;
+    box-shadow: 1px solid #E2E8F0;
+}
+
+.info-card {
+    background-color: #F8FAFC;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px sold #E2E8F0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    color: #0369A1;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0369A1;
+    line-height: 1.5;
+}
+
+.info-card p {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: #64748B;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.support-main {
+    padding: 40px 20px;
+    background-color: #F8FAFC;
+    min-height: calc(100hv - 300px);
+}
+
+.support-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.support-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #0369A1;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px
+}
+
+.support-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.support-subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #64748B;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.new-question-section {
+    margin: 40px 0;
+}
+
+.new-question-card {
+    background: linear-gradient(135deg, #0369A1 0%, #0284C7 100%);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(3, 105, 161, 0.2);
+}
+
+.question-icon {
+    font-size: 60px;
+    opacity: 0.9;
+}
+
+.question-content {
+    flex: 1;
+}
+
+.question-content h2 {
+    font-family: 'Arial' sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.question-content p {
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.question-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #F59E0B;
+    color: #1E293B;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Arial' sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.question-button:hover {
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.faq-section {
+    margin: 50px 0;
+}
+
+.faq-title {
+    font-family: 'Arial' sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.faq-title i {
+    color: #0369A1;
+    font-size: 30px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    color: #0369A1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question h3 {
+    font-family: 'Arial' sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1E293B;
+    flex: 1;
+    margin: 0 20px;
+    line-height: 1.6;
+}
+
+.faq-question i {
+    font-size: 20px;
+    color: #64748B;
+    transition: transform 0.3s ease;
+}
+
+.faq-number {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0369A1;
+    min-width: 40px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: #0369A1;
+}
+
+.faq-answer {
+    min-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background-color: #F8FAFC;
+}
+
+.faq-answer-content {
+    padding: 0 25px 25px 85px;
+}
+
+.faq-answer p {
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-answer li {
+    margin: 8px 0;
+    color: #475569;
+}
+
+.additional-help {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #E2E8F0;
+    text-align: center;
+}
+
+.additional-help h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 30px;
+}
+
+.help-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.help-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    text-decoration: none;
+    color: #0369A1;
+    width: 180px;
+    transition: all 0.3s ease;
+}
+
+.help-option:hover {
+    color: #0369A1;
+    background-color: #F8FAFC;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.help-option i {
+    font-size: 36px;
+}
+
+.help-option span {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.booking-main {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+    min-height: calc(100vh - 300px);
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.booking-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.booking-title {
+    font-family: 'Arial' sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #0369A1;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.booking-title i {
+    font-size: 40px;
+    color: #f59e0B;
+}
+
+.booking-subtitle {
+    font-family: "georgia", serif;
+    font-size: 18px;
+    color: #64748B;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border: 1px solid #E2E8F0;
+}
+
+.form-section {
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #F8FAFC;
+}
+
+.section-legend {
+    font-family: 'Arial' sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0369A1;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    font-weight: 699;
+    color: #1E293B;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-label i {
+    color: #0369A1;
+    font-weight: 18px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #E2E8F0;
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    color: #1E293B;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0369A1;
+    box-shadow: 0 0 0 3px rgba(3, 105, 161. 0.1);
+}
+
+.form-input:invalid:not(:placeholder-shown) {
+    border-color: #FF4444;
+}
+
+.form-hint {
+    font-family: 'Arial' sans-serif;
+    font-size: 13px;
+    color: #64748B;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.form-select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    color: #1E293B;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #0369A1;
+    box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1);
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    color: #475569;
+    user-select: none;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #CBD5E1;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radius-custom {
+    border-color: #0369A1;
+    background-color: #0369A1;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.radio-text {
+    font-weight: 500;
+}
+
+.radio-label:hover .radio-custom {
+    border-color: #0369A1;
+}
+
+.form-actions {
+    text-align: right;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed #E2E8F0;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #F5E90B 0%, #FBBF24 100%);
+    color: #1E293B;
+    border: none;
+    padding: 18px 45px;
+    font-family: 'Arial' sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+.buy-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+    background: linear-gradient(135deg, #F5E90B 0%, #FCD34D 100%);
+}
+
+.buy-button:active {
+    transform: translateY(-1px);
+}
+
+.booking-info {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0,08);
+    border-color: #0369A1;
+}
+
+.info-card i {
+    font-size: 40px;
+    color: #0369A1;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-family: 'Arial' sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-family: 'Arial' sans-serif;
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+.history-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.history-title {
+    color: #0369A1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-card {
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #0369A1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.booking-id {
+    color: #64748B;
+    font-size: 14px;
+}
+
+.booking-status {
+    background: #10B981;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.booking-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.detail-item {
+    margin-bottom: 8px;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #475569;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 50px;
+    color: #64748B;
+    font-size: 18px;
+}
+
+.clear-history {
+    background: #ef4444;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-main {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #E0F2FE 100%);
+    min-height: calc(100hv - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    min-width: 500px;
+    width: 100%;
+}
+
+.login-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+    border: 1px solid #E2E8F0;
+}
+
+.login-title {
+    font-family: 'Arial' sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0369A1;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.login-title i {
+    color: #f59e0b;
+    font-size: 32px;
+}
+
+.login-subtitle {
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    color: #64748B;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: 'Arial' sans-serif;
+    font-size: 16px;
+    transition: all 0,3s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0369A1;
+    box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-input {
+    padding-right: 50px;
+}
+
+.show-password-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #64748B;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.show-password-btn:hover {
+    color: #0369A1;
+}
+
+.form-hint {
+    font-family: 'Arial' sans-serif;
+    font-size: 13px;
+    color: #64748B;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.login-info {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #F8FAFC;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+}
+
+.login-info p {
+    font-family: 'Arial' sans-serif;
+    font-size: 14px;
+    color: #64748B;
+    margin: 5px 0;
+}
+
+.info-card {
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px;
+    border: #E2E8F0;
+}
+
+.info-card h3 {
+    font-family: 'Arial' sans-serif;
+    font-size: 20px;
+    color: #0369A1;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.info-card li {
+    font-family: 'Arial' sans-serif;
+    font-size: 15px;
+    color: #475569;
+    margin: 8px 0;
+}
+
+.account-main {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+    min-height: calc(100vh - 300px);
+}
+
+.account-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Карточка профиля */
+.profile-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2E8F0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.profile-avatar {
+    font-size: 80px;
+    color: #0369A1;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 8px;
+}
+
+.profile-email {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #64748B;
+}
+
+/* Форма редактирования */
+.edit-profile-form h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #0369A1;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-profile-form .form-group {
+    margin-bottom: 20px;
+}
+
+.save-button {
+    background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+    color: #1E293B;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.save-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+}
+
+/* Карточка бронирований */
+.bookings-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2E8F0;
+}
+
+.bookings-card h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #0369A1;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Список бронирований */
+#bookings-list {
+    min-height: 200px;
+}
+
+.empty-bookings {
+    text-align: center;
+    padding: 50px 20px;
+    color: #64748B;
+}
+
+.empty-bookings i {
+    font-size: 60px;
+    color: #CBD5E1;
+    margin-bottom: 20px;
+}
+
+.empty-bookings h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.empty-bookings p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.book-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0369A1 0%, #0284C7 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.book-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(3, 105, 161, 0.25);
+}
+
+/* Кнопки действий */
+.bookings-actions {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.clear-button {
+    background: #EF4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.clear-button:hover {
+    background: #DC2626;
+    transform: translateY(-1px);
+}
+
+/* Дополнительная информация */
+.account-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-box {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: #0369A1;
+}
+
+.info-box i {
+    font-size: 40px;
+    color: #0369A1;
+    margin-bottom: 15px;
+}
+
+.info-box h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #1E293B;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #64748B;
+    margin-bottom: 15px;
+}
+
+.logout-button {
+    background: #E2E8F0;
+    color: #475569;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #CBD5E1;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint">
+    <title> Zenith | Покупка билетов</title> <!-- Название сайта -->
+    <style>
+        body {background: #B9FFFF}
+    </style>
+    <link rel="stylesheet" href="style.css"> <!-- сслылка на файл со стилями-->
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-part header-left">
+          <img src="/images/logo.png" alt="Логотип" class="logo">
+        </div>
+        <div class="header-part header-center">
+            <a href="index.html" class="site-name">Zenith</a>
+        </div>
+        <div class="header-part header-right">
+            <a href="cabinet.html" class="account-link"> Личный кабинет</a>
+        </div>
+    </header>
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="contacts.html" class="nav-link">
+            Контакты
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="booking.html" class="nav-link">
+            Покупка билетов
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="account.html" class="nav-link">
+            Мои бронирования
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="support.html" class="nav-link">
+            Поддержка
+          </a>
+        </li>
+      </ul>
+    </nav>
+<main class="booking-main">
+  <div class="booking-container">
+    <div class="booking-header">
+      <h1 class="booking-title">Оформление билета</h1>
+      <p class="booking-subtitle">Заполните форму для покупки билета</p>
+    </div>
+
+    <form id="booking-form" class="booking-form">
+      <fieldset class="form-section">
+        <legend class="section-legend">
+          Данные пассажира
+        </legend>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lastname" class="form-label">
+              Фамилия
+            </label>
+            <input type="text" id="lastname" name="lastname"
+            class="form-input" placeholder="Иванов" required
+            pattern="[А-Яа-яЁёA-Za-z\s-]{2,50}" title="Введите вашу фамилию">
+            <div class="form-hint">Только буквы и дефис</div>
+          </div>
+
+        <div class="form-group">
+          <label for="firstname" class="form-label">
+            Имя
+          </label>
+          <input type="text" id="firstname" name="firstname"
+          class="form-input" placeholder="Иван" required
+          pattern="[А-Яа-яЁёA-Za-z\s-]{2,30}"
+          title="Только буквы, дефисы и пробелы (2-30 символов)">
+        </div>
+
+        <div class="form-group">
+          <label for="middlename" class="form-label">
+            Отчество (если есть)
+          </label>
+          <input type="text" id="middlename" name="middlename"
+          class="form-input" placeholder="Иванович" required
+          pattern="[А-Яа-яЁёA-Za-z\s-]{0,30}"
+          title="Только буквы, дефис или пробелы (0-30 символов)">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label">
+          Номер телефона*
+        </label>
+        <input type="tel" id="phone" name="phone"
+        class="form-input" placeholder="+ 7 (912) 345 67 89" required
+        pattern="\+7\s?[\(]?\d{3}[\)]?\s?\d{3}[-]?\d{2}[-]?\d{2}" title="Формат + 7 (912) 345 67 89">
+        <div class="form-hint"> Формат: + 7 (912) 345 67 89</div>
+      </div>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend class="section-legend">
+          Данные о рейсе
+        </legend>
+        <div class="form-group">
+          <label class="form-label">
+            Тип билета*
+          </label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="ticket-type" value="one-way"
+              id="one-way" checked>
+              <span class="radio-custom"></span>
+              <span class="radio-text">В один конец</span>
+            </label>
+
+            <label class="radio-label">
+              <input type="radio" name="ticket-type" value="round-trip"
+              id="round-trip">
+              <span class="radio-custom"></span>
+              <span class="radio-text"> Туда и обратно</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="departure-date" class="form-label">
+              Дата вылета*
+            </label>
+            <input type="data" id="departure-date" name="departure-date"
+            class="form-input" required>
+            <div class="form-hint">Выберите дату</div>
+          </div>
+
+          <div class="form-group" id="return-date-group" style="display: none;">
+            <label for="return-date" class="form-label">
+              Дата возврата*
+            </label>
+            <input type="date" id="return-date" name="return-date" class="form-input">
+            <div class="form-hint">Дата через 1-7 дней после вылета</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="departure-airport" class="form-label">
+              Откуда*
+            </label>
+            <select id="departure-airport" name="departure-airport" class="form-select" required>
+              <option value="" disabled selected>Выберите аэропорт</option>
+              <option value="MMSK">Мурманск (MMSK)</option>
+              <option value="LED"> Санкт-Петербург (LED)</option>
+              <option value="SVO"> Москва - Шереметьево (SVO)</option>
+              <option value="DME"> Москва - Домодедово (DME)</option>
+              <option value="ARH"> Архангельск (ARH)</option>
+              <option value="KRR"> Краснодар (KDD)</option>
+              <option value="VVO"> Владивосток (VVO)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="arrival-airport" class="form-label">
+              Куда*
+            </label>
+            <select id="arrival-airport" name="arrival-airport" class="form-select" required>
+              <option value="" disabled selected> Выберите аэропорт</option>
+              <option value="MMSK"> Мурманск (MMSK)</option>
+              <option value="LED"> Санкт-Петербург (LED)</option>
+              <option value="SVO"> Москва - Шереметьево (SVO)</option>
+              <option value="DME"> Москва - Домодедово (DME)</option>
+              <option value="ARH"> Архангельск (ARH)</option>
+              <option value="KRR"> Краснодар (KRR)</option>
+              <option value="VVO"> Владивосток (VVO)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="flight-class" class="form-label">
+            Класс перелета*
+          </label>
+          <select id="flight-class" name="flight-class" class="form-select" required>
+            <option value="" disabled selected> Выберите класс перелета</option>
+            <option value="ecomomy"> Эконом-класс</option>
+            <option value="business"> Бизнес-класс</option>
+            <option value="first"> Первый класс</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="buy-button">
+          Купить билет
+        </button>
+      </div>
+    </form>
+
+    <div class="booking-info">
+      <div class="info-card">
+        <h3> Безопасная оплата</h3>
+        <p> Все линчые данные защищены шифрованием</p>
+      </div>
+
+      <div class="info-card">
+        <h3> Мгновенное подтверждение</h3>
+        <p> Билет приходит на почту сразу после оплаты</p>
+      </div>
+      <div class="info-card">
+        <h3> Поддержка 24/7</h3>
+        <p> Помощь по любому вопросу</p>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-item footer-year">
+            2025
+        </div>
+        <div class="footer-item footer-company">
+            АО "Воздушные Траектории"
+        </div>
+        <div class="footer-item footer-copyright">
+            © Все права защищены
+        </div>
+    </div>
+</footer>
+</body>
+</html>

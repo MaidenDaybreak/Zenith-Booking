@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint">
+    <title> Zenith - Booking | Авиабилеты</title> <!-- Название сайта -->
+    <style>
+        body {background: #B9FFFF}
+    </style>
+    <link rel="stylesheet" href="style.css"> <!-- сслылка на файл со стилями-->
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ШАПКА САЙТА -->
+    <header class="site-header">
+        <div class="header-part header-left">
+            <a href="index.html">
+                <img src="/images/logo.png" alt="Логотип Zenith" class="logo">
+            </a>
+        </div>
+        
+        <div class="header-part header-center">
+            <a href="index.html" class="site-name">Zenith</a>
+        </div>
+        
+        <div class="header-part header-right">
+            <a href="account.html" class="account-link active">
+                <i class="bi bi-person-circle"></i>
+                Личный кабинет
+            </a>
+        </div>
+    </header>
+    
+    <nav class="nav-menu">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="contacts.html" class="nav-link">
+                    Контакты
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="booking.html" class="nav-link">
+                    Покупка билетов
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="account.html" class="nav-link active">
+                    Мои бронирования
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="support.html" class="nav-link">
+                    Поддержка
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="account-main">
+        <div class="account-container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name" id="userName">
+                        </h1>
+                        <p class="profile-email" id="userEmail">
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="edit-profile-form">
+                    <h2>
+                        Редактировать профиль
+                    </h2>
+                    
+                    <form id="profileForm">
+                        <!-- Имя -->
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">
+                                Имя
+                            </label>
+                            <input type="text" id="firstName" name="firstName" 
+                                   class="form-input" 
+                                   placeholder="Введите ваше имя">
+                        </div>
+                        
+                        <!-- Фамилия -->
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">
+                                Фамилия
+                            </label>
+                            <input type="text" id="lastName" name="lastName" 
+                                   class="form-input" 
+                                   placeholder="Введите вашу фамилию">
+                        </div>
+                        
+                        <button type="submit" class="save-button">
+                            Сохранить изменения
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- История бронирований -->
+            <div class="bookings-card">
+                <h2>
+                    <i class="bi bi-ticket-perforated"></i>
+                    Мои бронирования
+                </h2>
+                
+                <div id="bookings-list">
+                    <!-- Сюда будет вставлена история через JavaScript -->
+                    <div class="empty-bookings">
+                        <i class="bi bi-calendar-x"></i>
+                        <h3>У вас пока нет бронирований</h3>
+                        <p>Отправляйтесь в путешествие с нами!</p>
+                        <a href="booking.html" class="book-button">
+                            <i class="bi bi-airplane"></i>
+                            Купить билет
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Кнопка очистки истории -->
+                <div class="bookings-actions">
+                    <button onclick="clearBookings()" class="clear-button">
+                        <i class="bi bi-trash"></i>
+                        Очистить историю
+                    </button>
+                </div>
+            </div>
+            
+            <div class="account-info">
+                <div class="info-box">
+                    <h3>Безопасность</h3>
+                    <p>Все данные хранятся в вашем браузере</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>История</h3>
+                    <p>Последние 20 бронирований сохраняются</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Выход</h3>
+                    <button onclick="logout()" class="logout-button">
+                        Выйти из аккаунта
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-item footer-year">
+            2025
+        </div>
+        <div class="footer-item footer-company">
+            АО "Воздушные Траектории"
+        </div>
+        <div class="footer-item footer-copyright">
+            © Все права защищены
+        </div>
+    </div>
+</footer>
+</body>
+</html>
